@@ -72,38 +72,38 @@ Users can explore different development technologies with information such as
    useState allows a React component to store and update data.
    In this project, I used it in Technologies.jsx to keep track of the technologies selected by the user.
 
-When a user adds or removes a technology, the state is updated and React update the UI.
+   When a user adds or removes a technology, the state is updated and React update the UI.
 
 4. What does the useEffect hook do, and why did you need it to load the JSON data?
    useEffect is used to perform side effects in a React component, such as fetching data, working with APIs, or interacting with external system.
 
-However, I did not use useEffect in this project.
+   However, I did not use useEffect in this project.
 
-The JSON data is loaded uring fetch() inside an async function.
+   The JSON data is loaded uring fetch() inside an async function.
 
 5. Why does every item in a .map() list need a unique key prop?
    React needs a unique key to identify items ina a list.
 
-It helps to understand which items were added, removed or change when the list updates.
+   It helps to understand which items were added, removed or change when the list updates.
 
-Here i used theology.id. It gives every technology it's unique identity.
+   Here i used theology.id. It gives every technology it's unique identity.
 
 6. What is conditional rendering? Show one place you used it (example: the empty stack message).
    Conditional rendering means showing different UI depending on a condition.
 
-I used it in the Your Stack section.
+   I used it in the Your Stack section.
 
-When there are no selected technologies, the application shows:
+   When there are no selected technologies, the application shows:
 
-Your Stack is empty
+   Your Stack is empty
 
-When technologies have been selected, it displays the selected technologies instead.
+   When technologies have been selected, it displays the selected technologies instead.
 
 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 
-A parent passes data to a child using props.
-Here technologies.jsx passes the technology data and functions to Technology.jsx.
+   A parent passes data to a child using props.
+   Here technologies.jsx passes the technology data and functions to Technology.jsx.
 
-A child doesn't directly change the parent's state.
+   A child doesn't directly change the parent's state.
 
-Instead, the parent passes a function to the child through props. The child calls that function when something happens.
+   Instead, the parent passes a function to the child through props. The child calls that function when something happens.

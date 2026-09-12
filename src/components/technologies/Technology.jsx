@@ -24,7 +24,7 @@ const Technology = ({
 
       <div className="flex flex-col justify-between lg:flex-row gap-10">
         {/* Technologies */}
-        <div className="w-full lg:w-2/3">
+        <div className="w-full lg:w-3/4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             {technologies.map((technology) => {
               const isSelected = selectedTechnologies.some(

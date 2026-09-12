@@ -26,9 +26,9 @@ const Header = () => {
         </ul>
 
         <div className="hidden md:flex items-center gap-5">
-          <button className="text-xl cursor-pointer">Sign In</button>
+          <button className="text-lg cursor-pointer">Sign In</button>
 
-          <button className="text-xl text-white bg-[#D91B7E] py-2 px-5 rounded-3xl cursor-pointer hover:bg-[#be176e] transition">
+          <button className="text-lg text-white bg-[#D91B7E] py-2 px-5 rounded-3xl cursor-pointer hover:bg-[#be176e] transition">
             Sign Up
           </button>
         </div>
