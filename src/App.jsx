@@ -1,8 +1,12 @@
 import { Suspense } from "react";
+import { ToastContainer } from "react-toastify";
+
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Technologies from "./components/technologies/Technologies";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const technologiesData = async () => {
   const res = await fetch("/data.json");
@@ -12,15 +16,19 @@ const technologiesData = async () => {
 
 function App() {
   const technologiesPromise = technologiesData();
-  console.log(technologiesPromise);
+
   return (
     <>
-      <Header></Header>
-      <Banner></Banner>
+      <Header />
+      <Banner />
+
       <Suspense fallback={<h2>Loading....</h2>}>
-        <Technologies technologiesPromise={technologiesPromise}></Technologies>
+        <Technologies technologiesPromise={technologiesPromise} />
       </Suspense>
-      <Footer></Footer>
+
+      <Footer />
+
+      <ToastContainer position="top-right" autoClose={2000} />
     </>
   );
 }
